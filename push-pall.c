@@ -1,9 +1,12 @@
 #include "monty.h"
+/**
+ * push - adds element to the stack
+ * @new_node: next node 
+ * @stack- pointer to curent node
+ */
 
-
-	 int data;
-	 struct node *next;
-
+int data;
+struct node *next;
 
 void push(int value)
 {
@@ -29,6 +32,10 @@ void push(int value)
 	}
 }
 
+/**
+ * pall - prints all elements
+ * new_node: pointer to the next node
+ */
 void pall(void)
 {
 	struct_t *new_node = malloc(sizeof(struct_t));
