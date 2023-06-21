@@ -10,9 +10,15 @@
 
 stack_t *add_node(stack_t **head, int n)
 {
-	stack_t *temp, newNode; /* ptrs to traverse the list */
+	stack_t *temp; /* ptrs to traverse the list */
+	stack_t *newNode;
 
-	newNode = (stack_t *)malloc(sizeof(stack_t)); /* allocating memory */
+	newNode = (stack_t *)malloc(sizeof(stack_t));
+	if (newNode == NULL)
+	{
+		fprintf(stderr, "Error: Failed to allocate memory\n");
+		exit(EXIT_FAILURE);
+	}
 	newNode->n = n;
 	newNode->prev = NULL;
 	temp = *head;
