@@ -32,10 +32,23 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct node - handle functions
+ *@data: integer
+ *@next: pointer to next node
+ */
+
+typedef struct node {
+	int data;
+	struct node *next;
+} struct_t;
+
 #include <stdio.h>
 #include <stdlib.h>
 
 stack_t *add_node(stack_t **head, int n);
 FILE *read_file(int argc, char *argv[]);
-
+/* handle elements */
+void push(int value);
+void pall(void);
 #endif /* MONTY_H */
