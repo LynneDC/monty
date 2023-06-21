@@ -32,4 +32,10 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+#include <stdio.h>
+#include <stdlib.h>
+
+stack_t *add_node(stack_t **head, int n);
+FILE *read_file(int argc, char *argv[]);
+
 #endif /* MONTY_H */
