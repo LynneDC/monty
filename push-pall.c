@@ -18,7 +18,7 @@ void push(int value)
 	/*check if the stack is full*/
 	if(stack == NULL )
 	{
-		printf("Error: stack overflow\n");
+		
 		exit(EXIT_FAILURE);
 	}
 	else
