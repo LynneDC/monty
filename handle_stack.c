@@ -7,9 +7,9 @@
  * @h: head of the list
  * Return: the number of nodes
  */
-void pall_stack(const stack_t *h)
+void pall_stack(const stack_t *h, int count)
 {
-	int count;
+	
 	count = 0;
 /*check the is the stack is not empty*/
 	if (h != NULL)
@@ -22,6 +22,7 @@ void pall_stack(const stack_t *h)
 		count++;
 		h = h->next;
 	}
+	}
 }
 
 
@@ -33,8 +34,9 @@ void pall_stack(const stack_t *h)
  *  Return: address ofnew node or NULL if it fails
  */
 
-stack_t *pint(stack_t **head, unsigned int idx, int n)
+stack_t *pint(stack_t **head, unsigned int idx)
 {
+	int n = 0;
 	unsigned int  i;
 	stack_t *new;
 	stack_t *temp = *head;
